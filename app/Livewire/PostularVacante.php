@@ -30,11 +30,10 @@ class PostularVacante extends Component
 
         $datos = $this->validate();
 
-        $cv = $this->cv->store('public/cvs');
-        $datos['cv'] = str_replace('public/cvs/', '', $cv);
+        $cv = $this->cv->store('/cvs');
 
         $this->vacante->candidatos()->create([
-            'cv' => $datos['cv'],
+            'cv' => $cv,
             'user_id' => auth()->user()->id,
         ]);
 

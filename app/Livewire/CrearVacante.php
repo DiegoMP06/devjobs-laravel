@@ -33,15 +33,14 @@ class CrearVacante extends Component
     {
         $datos = $this->validate();
 
-        $imagen = $this->imagen->store('public/vacantes');
-        $datos['imagen'] = str_replace('public/vacantes/', '', $imagen);
+        $imagen = $this->imagen->store('/vacantes');
 
         auth()->user()->vacantes()->create([
             'titulo' => $datos['titulo'],
             'empresa' => $datos['empresa'],
             'ultimo_dia' => $datos['ultimo_dia'],
             'descripcion' => $datos['descripcion'],
-            'imagen' => $datos['imagen'],
+            'imagen' => $imagen,
             'salario_id' => $datos['salario'],
             'categoria_id' => $datos['categoria'],
         ]);

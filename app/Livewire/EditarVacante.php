@@ -54,8 +54,8 @@ class EditarVacante extends Component
                 unlink(storage_path('app/public/vacantes/' . $this->imagen_previa));
             }
 
-            $imagen = $this->imagen->store('public/vacantes');
-            $datos['imagen'] = str_replace('public/vacantes/', '', $imagen);
+            $imagen = $this->imagen->store('vacantes');
+            $datos['imagen'] = $imagen;
         } else {
             $datos['imagen'] = $this->imagen_previa;
         }

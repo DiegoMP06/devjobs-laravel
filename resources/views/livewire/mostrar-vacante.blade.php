@@ -23,7 +23,7 @@
 
     <div class="md:grid md:grid-cols-3 gap-4">
         <div class="md:col-span-1">
-            <img src="{{ asset('storage/vacantes/' . $vacante->imagen) }}" alt="Imagen Vacante {{ $vacante->titulo }}">
+            <img src="{{ asset('storage') . '/' . $vacante->imagen }}" alt="Imagen Vacante {{ $vacante->titulo }}">
         </div>
 
         <div class="md:col-span-2">

@@ -30,7 +30,7 @@
                                     </div>
 
                                     <div class="flex justify-end">
-                                        <a href="{{ asset('storage/cvs/' . $candidato->cv) }}" target="_blank" rel="noreferrer noopener" class="inline-flex items-center shadow dark:shadow-white px-2.5 py-0.5 border border-gray-300 text-sm leading-5 font-medium rounded-full text-gray-700 dark:text-gray-50 bg-white dark:bg-gray-700 hover:bg-gray-800">Ver CV</a>
+                                        <a href="{{ asset('storage') . '/' . $candidato->cv }}" target="_blank" rel="noreferrer noopener" class="inline-flex items-center shadow dark:shadow-white px-2.5 py-0.5 border border-gray-300 text-sm leading-5 font-medium rounded-full text-gray-700 dark:text-gray-50 bg-white dark:bg-gray-700 hover:bg-gray-800">Ver CV</a>
                                     </div>
                                 </li>
                             @empty
