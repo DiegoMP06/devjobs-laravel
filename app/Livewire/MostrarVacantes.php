@@ -16,8 +16,8 @@ class MostrarVacantes extends Component
 
         $vacante->delete();
         
-        if(is_dir(storage_path('app/public/vacantes/' . $vacante->imagen))) {
-            unlink(storage_path('app/public/vacantes/' . $vacante->imagen));
+        if(is_dir(storage_path('app/public/' . $vacante->imagen))) {
+            unlink(storage_path('app/public/' . $vacante->imagen));
         }
     }
 
